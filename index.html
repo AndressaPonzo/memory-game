@@ -1,0 +1,54 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Memory Game by elfiservice</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
+    <script defer src="fontawesome-all.min.js"></script>
+    <script>
+       /*  if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/the-memory-game/sw.js').then(function(registration) {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }).catch(function(err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
+            });
+            });
+        } */
+    </script>
+</head>
+<body>
+    <header>
+        <h1>  Jogo da memória para  Victor brincar</h1>
+        <h2>com modificações e usado apenas para fins de aprendizado do código</h2>
+    </header>
+    <main>
+        <section id="player_name"></section>
+        <section>
+            <div id="game_control"></div>
+        </section>
+        <section class="grid_container">
+                <table id="game_grid"></table>
+        </section>       
+    </main>
+
+    <div class="modal_game hide">
+        <div class="modal_game_content">
+              
+        </div>
+       
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+/*
+              Author do código original:	Armando Junior
+              Date:	 08/05/2018 
+              URL: https://ajudanaweb.com.br/artigo/o-jogo-da-memoria-the-memory-game
+              */
