@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
       level: function (levelNumber) {
           switch(levelNumber) {
               case 0: return ['E 🐘','A 🐝','E 🐘','A 🐝','I 🪀','I 🪀','O 🐑 ','O 🐑','U 🐻','U 🐻','C 🚘','C 🚘']; break;
-              case 1: return ['☯','♫','☯','♫','♞','♞','☂','☂','☀','☀','❤','❤','😀','😀','😜','😜']; break;
+              case 1: return ['C 🚗','B 🍌','C 🚗','B 🍌','D 🎲','D 🎲','V 🎻','V 🎻','O 🚌','O 🚌','T 🚃','T 🚃','😀','😀','😜','😜']; break;
               case 2: return ['☯','♫','☯','♫','♞','♞','☂','☂','☀','☀','❤','❤','😀','😀','😜','😜','👻','👻','👀','👀']; break;
               default: console.log('Error Level not passed');
               
@@ -144,17 +144,20 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   }
 
-  const view = {
+  const view = {    
       init: () => {
+       
           const [modalGameElement, modalGameContentElement] = view.getModalStructure();
           
           //input form ot get name of the player before start the game
           let contentAddNamePlayer = '<h2>Let\'s get started</h2>' +
           '<p></label> <input id="name_of_player" value="" type="text" placeholder="your nickname" required>' +
               '<button class="save_name_player_btn" > Go! </button></p>' +
-              '<h3>Last Players Scores</h3>';
+              '<h3>Last Players Scores</h3>' ; 
+             
           modalGameContentElement.innerHTML = contentAddNamePlayer;
-
+         
+         
           //List of Players - Ranking
           /* let playerListElement = document.createElement('ul');
           playerListElement.innerHTML = octupus.getRanking();
@@ -190,6 +193,7 @@ document.addEventListener('DOMContentLoaded', function () {
           return [modalGameElement, modalGameContentElement];
       },
       startTheGame: () => {
+       // playSound('sounds/inicial.mp3');
           let gridElement = document.getElementById('game_grid');
           const [modalGameElement, modalGameContentElement] = view.getModalStructure();
           //get a array with values for the level -> level 0 = 16 cards
@@ -350,10 +354,11 @@ document.addEventListener('DOMContentLoaded', function () {
                       let timerEndTheGameElement = document.getElementById('timer');
 
                       let contentEndTheGame = '<h2>Well Done!!</h2>' +
-                                              '<p>You finished with just ' + octupus.getMovimentCounter() + ' moviments!' +
+                                              '<p>🏆 🥇 🏅 🎖 🎽' + octupus.getMovimentCounter() + ' moviments!' +
                                               '<p>With the time of ' + timerEndTheGameElement.innerText + '</p>' +
                                               '<p>'+ starRatingElement.innerText +'</p>' +
                                               '<p><img width="40%" src="images/bananaman.gif" alt="A animeted gift with a Dacing banana" ></p>';
+                                              playSound('sounds/somDaVitoria.mp3');
                       modalGameContentElement.innerHTML = contentEndTheGame;
 
                       let nextLevelElement = document.createElement('div');

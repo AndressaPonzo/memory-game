@@ -2,19 +2,21 @@ body {
   font-family: 'Fredoka One', cursive;
   background-color: #ccc;
   text-align: center;
-  color: #033c63;
+  color: #186294;
  
 }
 
 .grid_container {
   width: 85%;
-  margin: 0 auto;
+ margin-left: 2%
+  ;
+  
   
 }
 
 table {
   margin: 0 auto;
-  background-color: #11598a;
+  background-color: #64208b;
   background-image: url("../images/french-stucco.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
