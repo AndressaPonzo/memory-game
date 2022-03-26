@@ -7,7 +7,7 @@ body {
 }
 
 .grid_container {
-  width: 85%;
+  width: 95%;
  margin-left: 2%
   ;
 }
@@ -19,6 +19,8 @@ h3 {
 h1 {
   margin-bottom: 0%;
   margin-top: 0%;
+  width: 95%;
+  margin-left: 2%
 }
 
 table {
